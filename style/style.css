@@ -1,0 +1,142 @@
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /*To Remove the Blue Highlight*/
+}
+
+body{
+    background-color: #1e1c1c;
+}
+
+.navibar{
+    background-color: #1e1c1c;  
+    font-family: calibri;
+    user-select: none;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.navidiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    border-bottom: 1px solid white;
+}
+
+.logo a{
+    font-size: 20px ;
+    color: white;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    font-weight: bold;
+    user-select: none;
+    padding-left: 15px;
+}
+
+.navb li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navb a{
+    color: #cecece;
+    display: flex;
+    height: 60px;
+    width: 50%;
+    font-weight: bold;
+    user-select: none;
+    margin-left: 30px;
+    align-items: center;
+}
+
+.navb li a:hover{
+    color: white;
+}
+
+.navb li a::before{
+    content: "";
+
+}
+
+.H{
+  color: white;
+}
+
+
+/*For Menu*/
+
+.sidebar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: white;
+/*    backdrop-filter: blur(10px);  If you want to blur the menu bar*/
+    width: 250px;
+    display: none;    
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    list-style: none;
+    width: 100%;
+}
+.sidebar a{
+    background-color: white;
+    color: black;
+    margin: 0;
+    height: 60px;
+    font-weight: bold;
+    user-select: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0 40px ;
+}
+.sidebar a:hover{
+    color: rgb(51, 55, 255);
+    width: 100%;
+}
+
+.menu{
+    color: #cecece;
+    height: 60px;
+    width: 100%;
+}
+.menu:hover{
+    color: white;
+}
+.menuclose{
+    color: black;
+}
+.menuclose:hover{
+    color: rgb(51, 55, 255);
+}
+.menu-button a{
+    display: none;
+    height: 60px;
+    user-select: none;
+    align-content: center;
+}
+
+/* For it to be responsive in mobiles*/
+
+@media screen and (max-width: 635px){
+    .hideOnMobile a{
+        display: none;
+    }
+    .menu-button a{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}

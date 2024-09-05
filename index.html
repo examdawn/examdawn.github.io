@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCA-STUDENTS</title>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BCA-STUDENTS</title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
 
-    <!-- Thanks, zero-md! Handles all our markdown for us-->
-    <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md@3?register"></script>   
-</head>
-<body>
-    <!--<zero-md src="https://cdn.jsdelivr.net/gh/bca-students/content@main/index.md"></zero-md>-->
-    <zero-md src="https://raw.githubusercontent.com/bca-students/content/main/index.md"></zero-md>
-</body>
+    <body>
+        <nav class="navibar">
+            <div class="navidiv">
+                <div class="logo"><a href="/">BCA STUDENTS</a></div>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar()><a href="#"><svg class="menuclose" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="30px" fill="currentcolor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a href="content">CONTENT</a></li>
+                    <li><a href="about">ABOUT</a></li>
+                    <li><a href="contact">CONTACT</a></li>
+                    <li><a href="contributors">CONTRIBUTORS</a></li>                    
+                </ul>
+                <ul class="navb">
+                    <li class="hideOnMobile"><a href="content">CONTENT</a></li>
+                    <li class="hideOnMobile"><a href="about">ABOUT</a></li>
+                    <li class="hideOnMobile"><a href="contact">CONTACT</a></li>    
+                    <li class="hideOnMobile"><a href="contributors">CONTRIBUTORS</a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg class="menu" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="30px" fill="currentcolor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>                    
+                </ul>
+            </div>
+        </nav>
+        
+        <script src="js/myscript.js"></script> 
+    </body>
 </html>
