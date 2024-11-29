@@ -9,13 +9,18 @@ hero:
     - theme: brand
       text: Docs
       link: /#
-#    - theme: alt
-#      text:
-#      link: 
+    - theme: alt
+      text: Github
+      link: https://github.com/bca-students/
 
 features:
   - title: Assignments
+    link: /#
   - title: Important Questions
-  - title: Feature C
+    link: /#
+  - title: Lab Records
+    link: /#
+  - title: PYQ Paper
+    link: /#
 ---
 

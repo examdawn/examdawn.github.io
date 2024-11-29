@@ -8,7 +8,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Contribute', link: "/#"}
+      { text: 'Contribute', link: "/#"},
+      { text: 'Contact Us', link: "/#"}
     ],
 
     sidebar: [
@@ -29,7 +30,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'linkedin', link: 'www.linkedin.com/in/jack-pots'},
-      { icon: 'github', link: 'https://github.com/bca-students/content/' }
+      { icon: 'github', link: 'https://github.com/jack-pots/' }
     ]
   }
 })
