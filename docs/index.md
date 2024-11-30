@@ -20,7 +20,7 @@ features:
     link: /#
   - title: Lab Records
     link: /#
-  - title: PYQ Paper
+  - title: Notes From Faculty
     link: /#
 ---
 
