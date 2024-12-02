@@ -18,10 +18,10 @@ export default defineConfig({
         items: [
           { text: 'General English', link: '/#' },
           { text: 'Additional English', link: '/#' },
-          { text: 'DBMS', link: '/#' },
+          { text: 'Database Management System', link: '/#' },
           { text: 'C# .NET Framework', link: '/#' },
-          { text: 'CCN', link: '/#' },
-          { text: 'SMM', link: '/#' },
+          { text: 'Computer Communication and Networking', link: '/#' },
+          { text: 'Social Media Marketing', link: '/#' },
           { text: 'Indian Constitution', link: '/#' }
 
         ]
@@ -29,7 +29,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'linkedin', link: 'www.linkedin.com/in/jack-pots'},
+      { icon: 'linkedin', link: 'https://linkedin.com/in/jack-pots'},
       { icon: 'github', link: 'https://github.com/jack-pots/' }
     ]
   }
