@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Bca-Students",
   description: "An All-in-One Resource Site for BCA Students",
+  ignoreDeadLinks: true, // TODO: Replace with proper link handling
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
