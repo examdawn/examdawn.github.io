@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Docs
-      link: /#
+      link: /workspaces/bca-students.github.io/content/NEP2020/2024/BCA/index.md
     - theme: alt
       text: Github
       link: https://github.com/bca-students/
