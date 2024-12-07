@@ -1,3 +1,3 @@
-[submodule "content"]
-	path = docs/content
+[submodule "docs/contents"]
+	path = docs/contents
 	url = https://github.com/bca-students/content.git
