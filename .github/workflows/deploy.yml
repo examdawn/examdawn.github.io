@@ -50,8 +50,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm ci # or pnpm install / yarn install / bun install
-      - name: Install Submodule
-        run: git submodule update --init --recursive
+      - name: Update Submodule
+        run: git submodule update --init --remote # Initialize and update all submodules to their latest commits.
       - name: Build with VitePress
         run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
