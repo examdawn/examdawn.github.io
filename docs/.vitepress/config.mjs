@@ -13,11 +13,14 @@ export default withMermaid({
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Contribute', link: "/#"},
-      { text: 'Contact Us', link: "/#"}
+      { text: 'Contribute', link: "/contents/Contribute"},
+      { text: 'Queries and Suggestions' /*'Contact Us'*/, link: "https://github.com/bca-students/content/issues"}
     ],
 
     sidebar: [
+      {
+        text: 'Home - BCA Subjects'
+      },
       {
         text: 'Semester 3',
         collapsed: false,
