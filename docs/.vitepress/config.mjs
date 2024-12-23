@@ -5,6 +5,7 @@ export default withMermaid({
   title: "Bca-Students",
   description: "An All-in-One Resource Site for BCA Students",
   ignoreDeadLinks: true, // TODO: Replace with proper link handling
+  cleanUrls: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
