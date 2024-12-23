@@ -14,6 +14,7 @@ export default withMermaid({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Contribute', link: "/contents/Contribute"},
+      { text: 'Request Takedown', link: "/contents/takedown"},
       { text: 'Queries and Suggestions' /*'Contact Us'*/, link: "https://github.com/bca-students/content/issues"}
     ],
 
