@@ -19,16 +19,23 @@ export default withMermaid({
 
     sidebar: [
       {
-        text: 'Subjects',
+        text: 'Semester 3',
+        collapsed: false,
         items: [
-          { text: 'General English', link: '/#' },
-          { text: 'Additional English', link: '/#' },
-          { text: 'Database Management System', link: '/#' },
-          { text: 'C# .NET Framework', link: '/#' },
-          { text: 'Computer Communication and Networking', link: '/#' },
-          { text: 'Social Media Marketing', link: '/#' },
-          { text: 'Indian Constitution', link: '/#' }
-
+          /*{ text: 'General English', link: '/#' },*/
+          { text: 'Additional English', link: '/contents/NEP2020/2024/BCA/3rdsem/addEng/' },
+          { text: 'Database Management System', link: '/contents/NEP2020/2024/BCA/3rdsem/dbms/' },
+          { text: 'C# .NET Framework', link: '/contents/NEP2020/2024/BCA/3rdsem/cs/' },
+          { text: 'Computer Communication and Networking', link: '/contents/NEP2020/2024/BCA/3rdsem/ccn/' },
+          { text: 'Social Media Marketing', link: '/contents/NEP2020/2024/BCA/3rdsem/smm/' },
+          { text: 'Indian Constitution', link: '/contents/NEP2020/2024/BCA/3rdsem/ic/' }
+        ]
+      },
+      {
+        text: 'Semester 4',
+        collapsed: true,
+        items: [
+          { text: ' ', link: '/#' }
         ]
       }
     ],
