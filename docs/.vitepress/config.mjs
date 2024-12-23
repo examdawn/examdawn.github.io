@@ -1,7 +1,7 @@
-import { defineConfig } from 'vitepress'
+import { withMermaid } from "vitepress-plugin-mermaid"
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   title: "Bca-Students",
   description: "An All-in-One Resource Site for BCA Students",
   ignoreDeadLinks: true, // TODO: Replace with proper link handling
@@ -33,5 +33,12 @@ export default defineConfig({
       { icon: 'linkedin', link: 'https://linkedin.com/in/jack-pots'},
       { icon: 'github', link: 'https://github.com/jack-pots/' }
     ]
+  },
+  mermaid: {
+    // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
+  },
+  // optionally set additional config for plugin itself with MermaidPluginConfig
+  mermaidPlugin: {
+    class: "mermaid my-class", // set additional css classes for parent container 
   }
 })
