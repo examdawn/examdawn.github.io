@@ -18,13 +18,12 @@ export default withMermaid({
       { text: 'Queries and Suggestions' /*'Contact Us'*/, link: "https://github.com/bca-students/content/issues"},
       { text: 'Year',
         items: [
-          { text: 'First Year', link: '/#' },
-          { text: 'Second Year', link: '/#' },
-          { text: 'Third Year', link: '/#' },
+          //{ text: 'First Year', link:'#'  },
+          { text: 'Second Year', link: '/docs/contents/NEP2020/2024/BCA/3rdsem/index.md'  },
+          //{ text: 'Third Year', link:'#'},
         ],
       },
     ],
-
     sidebar: [
       {
         text: 'Home - BCA Subjects'
@@ -50,7 +49,6 @@ export default withMermaid({
         ]
       }
     ],
-
     socialLinks: [
       { icon: 'linkedin', link: 'https://linkedin.com/in/jack-pots'},
       { icon: 'github', link: 'https://github.com/jack-pots/' }
