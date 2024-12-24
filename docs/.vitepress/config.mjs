@@ -15,7 +15,14 @@ export default withMermaid({
       { text: 'Home', link: '/' },
       { text: 'Contribute', link: "/contents/Contribute"},
       { text: 'Request Takedown', link: "/contents/takedown"},
-      { text: 'Queries and Suggestions' /*'Contact Us'*/, link: "https://github.com/bca-students/content/issues"}
+      { text: 'Queries and Suggestions' /*'Contact Us'*/, link: "https://github.com/bca-students/content/issues"},
+      { text: 'Year',
+        items: [
+          { text: 'First Year', link: '/#' },
+          { text: 'Second Year', link: '/#' },
+          { text: 'Third Year', link: '/#' },
+        ],
+      },
     ],
 
     sidebar: [
