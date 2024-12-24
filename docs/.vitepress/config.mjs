@@ -19,7 +19,7 @@ export default withMermaid({
       { text: 'Year',
         items: [
           //{ text: 'First Year', link:'#'  },
-          { text: 'Second Year', link: '/docs/contents/NEP2020/2024/BCA/3rdsem/index.md'  },
+          { text: 'Second Year', link: '/contents/NEP2020/2024/BCA/3rdsem/index.md'  },
           //{ text: 'Third Year', link:'#'},
         ],
       },
