@@ -7,10 +7,10 @@ hero:
   text: "An All-in-One Resource Site for BCA Students"
   actions:
     - theme: brand
-      text: Docs
+      text: Contents
       link: contents/NEP2020/2024/BCA/index
     - theme: alt
-      text: Github
+      text: Docs
       link: https://github.com/bca-students/content/
 
 features:
