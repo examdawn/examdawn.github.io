@@ -67,8 +67,7 @@ jobs:
         run: | 
           mkdir -p docs/web-projects/assets/tcpp
           cd docs/web-projects/assets/tcpp
-          wget https://turboc.pages.dev/turbocpp-831b2f5.jsdos
-          wget https://v8.js-dos.com/latest/js-dos.js
+          wget https://turboc.pages.dev/turbocpp-831b2f5.jsdos --output turbocpp.jsdos
       - name: Build with VitePress
         run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
