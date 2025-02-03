@@ -62,6 +62,13 @@ jobs:
       #
       #    echo "Generating assignment.md, lab.md, solved.md"
       #    bash helper-scripts/gen-md.sh
+      - name: Set up jsdos and Turbo C++
+        continue-on-error: true
+        run: | 
+          mkdir -p docs/web-projects/assets/tcpp
+          cd docs/web-projects/assets/tcpp
+          wget https://turboc.pages.dev/turbocpp-831b2f5.jsdos
+          wget https://v8.js-dos.com/latest/js-dos.js
       - name: Build with VitePress
         run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
