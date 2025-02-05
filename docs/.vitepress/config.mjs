@@ -12,7 +12,7 @@ export default withMermaid({
     editLink: {
       pattern: ({ filePath }) => {
         if (filePath.startsWith('contents/')) {
-          return `https://github.com/examdawn/content/edit/main/${filePath}`
+          return `https://github.com/examdawn/content/edit/${filePath}`
         } else {
           return `https://github.com/examdawn/examdawn.github.io/edit/vitepress/docs/${filePath}`
         }
