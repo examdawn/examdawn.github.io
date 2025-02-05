@@ -7,10 +7,10 @@ hero:
   text: "An All-in-One Resource Site for last minute preparation"
   actions:
     - theme: brand
-      text: Contents
+      text: Open Contents
       link: contents/NEP2020/2024/BCA/index
     - theme: alt
-      text: Docs
+      text: Add to Docs
       link: https://github.com/examdawn/content/
 
 features:
