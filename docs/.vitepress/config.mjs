@@ -7,6 +7,19 @@ export default withMermaid({
   ignoreDeadLinks: true, // TODO: Replace with proper link handling
   cleanUrls: true,
   themeConfig: {
+    
+    // https://vitepress.dev/reference/default-theme-edit-link
+    editLink: {
+      pattern: ({ filePath }) => {
+        if (filePath.startsWith('contents/')) {
+          return `https://github.com/examdawn/content/edit/main/${filePath}`
+        } else {
+          return `https://github.com/examdawn/examdawn.github.io/edit/vitepress/docs/${filePath}`
+        }
+      }
+    },
+    
+    
     // https://vitepress.dev/reference/default-theme-config
     search: {
       provider: 'local'
