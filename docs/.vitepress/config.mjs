@@ -2,7 +2,7 @@ import { withMermaid } from "vitepress-plugin-mermaid"
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
-  title: "Bca-Students",
+  title: "Exam Dawn",
   description: "An All-in-One Resource Site for BCA Students",
   ignoreDeadLinks: true, // TODO: Replace with proper link handling
   cleanUrls: true,
@@ -15,7 +15,7 @@ export default withMermaid({
       { text: 'Home', link: '/' },
       { text: 'Contribute', link: "/contents/Contribute"},
       { text: 'Request Takedown', link: "/contents/takedown"},
-      { text: 'Queries and Suggestions' /*'Contact Us'*/, link: "https://github.com/bca-students/content/issues"},
+      { text: 'Queries and Suggestions' /*'Contact Us'*/, link: "https://github.com/examdawn/content/issues"},
       { text: 'Year',
         items: [
           //{ text: 'First Year', link:'#'  },
@@ -52,7 +52,7 @@ export default withMermaid({
     socialLinks: [
       {   
         icon: 'github', 
-        link: 'https://github.com/bca-students/', 
+        link: 'https://github.com/examdawn/', 
         ariaLabel: 'Our Git Profile' }
     ]
   },
