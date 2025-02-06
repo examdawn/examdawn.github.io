@@ -15,12 +15,14 @@ const generateConfig = async () => {
     const programName = program.$.name
     
     // Add to program-specific sidebar
-    sidebarConfig[`/contents/NEP2020/2024/${programName}/`] = [{  // Key change here
+    sidebarConfig[`/contents/NEP2020/2024/${programName}/`] = [{
       text: programName,
+      collapsed: false,
       items: program.year.map(year => {
         return year.semester.map(sem => {
           const semesterItems = [{
             text: `${sem.$.name} - Year ${year.$.number}`,
+            collapsed: false,
             link: `/contents/NEP2020/2024/${programName}/${sem.$.name}/`
           }]
 
@@ -32,6 +34,7 @@ const generateConfig = async () => {
               
               return {
                 text: `${subject.$.name}`,
+                collapsed: false,  // Added here
                 link: `/contents/NEP2020/2024/${programName}/${sem.$.name}/${subject._}`
               }
             })
