@@ -45,12 +45,10 @@ const generateConfig = async () => {
 
     // Add to nav years
     program.year.forEach(year => {
-      year.semester.forEach(sem => {
         navYearItems.push({
-          text: `${sem.$.name} - ${programName}`,
-          link: `/contents/NEP2020/2024/${programName}/${sem.$.name}/`
+          text: `${programName}`,
+          link: `/contents/NEP2020/2024/${programName}/`
         })
-      })
     })
   })
 }
