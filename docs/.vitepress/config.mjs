@@ -81,7 +81,7 @@ export default withMermaid({
       { text: 'Request Takedown', link: "/contents/takedown" },
       { text: 'Queries and Suggestions', link: "https://github.com/examdawn/content/issues" },
       {
-        text: 'Programs & Years',
+        text: 'Select Course',
         items: navItemNames
       }
     ],
