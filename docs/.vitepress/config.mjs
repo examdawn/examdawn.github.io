@@ -18,10 +18,28 @@ const generateConfig = async () => {
     sidebarConfig.push({
       text: programName,
       items: program.year.map(year => {
-        return year.semester.map(sem => ({
-          text: `${sem.$.name} - Year ${year.$.number}`,
-          link: `/contents/NEP2020/2024/${programName}/${sem.$.name}/`
-        }))
+        return year.semester.map(sem => {
+          const semesterItems = [{
+            text: `${sem.$.name} - Year ${year.$.number}`,
+            link: `/contents/NEP2020/2024/${programName}/${sem.$.name}/`
+          }]
+
+          // Add subject items if they exist
+          if (sem.subject) {
+            const subjectItems = sem.subject.map(subject => {
+              // Add console.log to debug the subject structure
+              console.log('Subject:', JSON.stringify(subject, null, 2))
+              
+              return {
+                text: `${subject.$.name}`,
+                link: `/contents/NEP2020/2024/${programName}/${sem.$.name}/${subject._}`
+              }
+            })
+            semesterItems[0].items = subjectItems
+          }
+
+          return semesterItems[0]
+        })
       }).flat()
     })
 
