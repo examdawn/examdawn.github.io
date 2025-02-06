@@ -4,7 +4,7 @@ import { parseStringPromise } from 'xml2js'
 
 const xmlData = fs.readFileSync('./docs/contents/sidebar.xml', 'utf8')
 const sidebarConfig = {}  // Changed to object instead of array
-const navYearItems = []
+const navItemNames = []
 
 // Parse XML and generate config
 const generateConfig = async () => {
@@ -44,14 +44,12 @@ const generateConfig = async () => {
     }]
 
     // Add to nav years (unchanged)
-    program.year.forEach(year => {
-        navYearItems.push({
-          text: `${programName}`,
-          link: `/contents/NEP2020/2024/${programName}/`
-        })
+    navItemNames.push({
+      text: programName,
+      link: `/contents/NEP2020/2024/${programName}/`
     })
-  })
-}
+    })
+  }
 
 // Generate configs before export
 await generateConfig()
@@ -81,7 +79,7 @@ export default withMermaid({
       { text: 'Queries and Suggestions', link: "https://github.com/examdawn/content/issues" },
       {
         text: 'Programs & Years',
-        items: navYearItems
+        items: navItemNames
       }
     ],
     sidebar: sidebarConfig,
