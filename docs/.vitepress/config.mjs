@@ -3,7 +3,7 @@ import { withMermaid } from "vitepress-plugin-mermaid"
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
   title: "Exam Dawn",
-  description: "An All-in-One Resource Site for BCA Students",
+  description: "An All-in-One Resource Site BNU UG Students",
   ignoreDeadLinks: true, // TODO: Replace with proper link handling
   cleanUrls: true,
   lastUpdated: true,
@@ -38,6 +38,16 @@ export default withMermaid({
         ],
       },
     ],
+
+    // sidebar: {
+      // 'semester 1/': { base: '/semester 1/', items: sidebars1() },
+      // 'semester 2/': { base: '/semester 2/', items: sidebars2() },
+      // 'semester 3/': { base: '/semester 3/', items: sidebars3() },
+      // 'semester 4/': { base: '/semester 4/', items: sidebars4() },
+      // 'semester 5/': { base: '/semester 5/', items: sidebars5() },
+      // 'semester 6/': { base: '/semester 6/', items: sidebars6() },
+      // '/reference/': { base: '/reference/', items: sidebarReference() }
+    // },
     sidebar: [
       {
         text: 'Home - BCA Subjects'

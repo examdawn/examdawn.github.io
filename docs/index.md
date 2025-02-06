@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Exam Dawn"
-  text: "An All-in-One Resource Site for last minute preparation"
+  text: "An All-in-One Resource Site for BNU UG Students"
   actions:
     - theme: brand
       text: Open Contents
