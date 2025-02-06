@@ -1,14 +1,51 @@
 import { withMermaid } from "vitepress-plugin-mermaid"
+import fs from 'fs'
+import { parseStringPromise } from 'xml2js'
 
-// https://vitepress.dev/reference/site-config
+const xmlData = fs.readFileSync('./docs/contents/sidebar.xml', 'utf8')
+const sidebarConfig = []
+const navYearItems = []
+
+// Parse XML and generate config
+const generateConfig = async () => {
+  const result = await parseStringPromise(xmlData)
+  const programs = result.sidebar.program
+
+  programs.forEach(program => {
+    const programName = program.$.name
+    
+    // Add to sidebar
+    sidebarConfig.push({
+      text: programName,
+      items: program.year.map(year => {
+        return year.semester.map(sem => ({
+          text: `${sem.$.name} - Year ${year.$.number}`,
+          link: `/contents/NEP2020/2024/${programName}/${sem.$.name}/`
+        }))
+      }).flat()
+    })
+
+    // Add to nav years
+    program.year.forEach(year => {
+      year.semester.forEach(sem => {
+        navYearItems.push({
+          text: `${sem.$.name} - ${programName}`,
+          link: `/contents/NEP2020/2024/${programName}/${sem.$.name}/`
+        })
+      })
+    })
+  })
+}
+
+// Generate configs before export
+await generateConfig()
+
 export default withMermaid({
   title: "Exam Dawn",
   description: "An All-in-One Resource Site for BCA Students",
-  ignoreDeadLinks: true, // TODO: Replace with proper link handling
+  ignoreDeadLinks: true,
   cleanUrls: true,
   themeConfig: {
-    
-    // https://vitepress.dev/reference/default-theme-edit-link
     editLink: {
       pattern: ({ filePath }) => {
         if (filePath.startsWith('contents/')) {
@@ -18,62 +55,32 @@ export default withMermaid({
         }
       }
     },
-    
-    
-    // https://vitepress.dev/reference/default-theme-config
     search: {
       provider: 'local'
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Contribute', link: "/contents/Contribute"},
-      { text: 'Request Takedown', link: "/contents/takedown"},
-      { text: 'Queries and Suggestions' /*'Contact Us'*/, link: "https://github.com/examdawn/content/issues"},
-      { text: 'Year',
-        items: [
-          //{ text: 'First Year', link:'#'  },
-          { text: 'Second Year', link: '/contents/NEP2020/2024/BCA/3rdsem/index.md'  },
-          //{ text: 'Third Year', link:'#'},
-        ],
-      },
-    ],
-    sidebar: [
+      { text: 'Contribute', link: "/contents/Contribute" },
+      { text: 'Request Takedown', link: "/contents/takedown" },
+      { text: 'Queries and Suggestions', link: "https://github.com/examdawn/content/issues" },
       {
-        text: 'Home - BCA Subjects'
-      },
-      {
-        text: 'Semester 3',
-        collapsed: false,
-        items: [
-          /*{ text: 'General English', link: '/#' },*/
-          { text: 'Additional English', link: '/contents/NEP2020/2024/BCA/3rdsem/addEng/' },
-          { text: 'Database Management System', link: '/contents/NEP2020/2024/BCA/3rdsem/dbms/' },
-          { text: 'C# .NET Framework', link: '/contents/NEP2020/2024/BCA/3rdsem/cs/' },
-          { text: 'Computer Communication and Networking', link: '/contents/NEP2020/2024/BCA/3rdsem/ccn/' },
-          { text: 'Social Media Marketing', link: '/contents/NEP2020/2024/BCA/3rdsem/smm/' },
-          { text: 'Indian Constitution', link: '/contents/NEP2020/2024/BCA/3rdsem/ic/' }
-        ]
-      },
-      {
-        text: 'Semester 4',
-        collapsed: true,
-        items: [
-          { text: ' ', link: '/#' }
-        ]
+        text: 'Programs & Years',
+        items: navYearItems
       }
     ],
+    sidebar: sidebarConfig,
     socialLinks: [
-      {   
-        icon: 'github', 
-        link: 'https://github.com/examdawn/', 
-        ariaLabel: 'Our Git Profile' }
+      { 
+        icon: 'github',
+        link: 'https://github.com/examdawn/',
+        ariaLabel: 'Our Git Profile'
+      }
     ]
   },
   mermaid: {
     // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
   },
-  // optionally set additional config for plugin itself with MermaidPluginConfig
   mermaidPlugin: {
-    class: "mermaid my-class", // set additional css classes for parent container 
+    class: "mermaid my-class"
   }
 })
