@@ -3,7 +3,7 @@ import fs from 'fs'
 import { parseStringPromise } from 'xml2js'
 
 const xmlData = fs.readFileSync('./docs/contents/sidebar.xml', 'utf8')
-const sidebarConfig = []
+const sidebarConfig = {}  // Changed to object instead of array
 const navYearItems = []
 
 // Parse XML and generate config
@@ -14,8 +14,8 @@ const generateConfig = async () => {
   programs.forEach(program => {
     const programName = program.$.name
     
-    // Add to sidebar
-    sidebarConfig.push({
+    // Add to program-specific sidebar
+    sidebarConfig[`/contents/NEP2020/2024/${programName}/`] = [{  // Key change here
       text: programName,
       items: program.year.map(year => {
         return year.semester.map(sem => {
@@ -41,9 +41,9 @@ const generateConfig = async () => {
           return semesterItems[0]
         })
       }).flat()
-    })
+    }]
 
-    // Add to nav years
+    // Add to nav years (unchanged)
     program.year.forEach(year => {
         navYearItems.push({
           text: `${programName}`,
