@@ -9,10 +9,8 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'layout-top': () => h(ProgramState)
     })
   },
   enhanceApp({ app }) {
-    app.component('ProgramState', ProgramState)
   }
 }
