@@ -59,7 +59,7 @@ await generateConfig()
 
 export default withMermaid({
   title: "Exam Dawn",
-  description: "An All-in-One Resource Site for BCA Students",
+  description: "An All-in-One Resource Site for last minute preparation",
   ignoreDeadLinks: true,
   cleanUrls: true,
   lastUpdated: true,
@@ -80,6 +80,7 @@ export default withMermaid({
       { text: 'Home', link: '/' },
       { text: 'Contribute', link: "/contents/Contribute" },
       { text: 'Request Takedown', link: "/contents/takedown" },
+      { text: 'Typography', link: "/contents/typography" },
       { text: 'Queries and Suggestions', link: "https://github.com/examdawn/content/issues" },
       {
         text: 'Select Course',
