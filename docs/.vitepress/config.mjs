@@ -22,7 +22,7 @@ const generateConfig = async () => {
         return year.semester.map(sem => {
           const semesterItems = [{
             text: `${sem.$.name} - Year ${year.$.number}`,
-            collapsed: true,
+            collapsed: false,
             link: `/contents/NEP2020/2024/${programName}/${sem.$.name}/`
           }]
 
