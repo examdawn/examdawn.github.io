@@ -62,6 +62,7 @@ export default withMermaid({
   description: "An All-in-One Resource Site for BCA Students",
   ignoreDeadLinks: true,
   cleanUrls: true,
+  lastUpdated: true,
   themeConfig: {
     editLink: {
       pattern: ({ filePath }) => {
