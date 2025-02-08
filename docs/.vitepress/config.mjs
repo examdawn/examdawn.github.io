@@ -96,6 +96,9 @@ export default withMermaid({
       }
     ]
   },
+  markdown: {
+    math: true
+  },
   mermaid: {
     // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
   },
