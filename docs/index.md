@@ -27,5 +27,5 @@ features:
     title: Notes From Faculty
     link: /contents/NEP2020/2024/BCA/3rdsem/notes
 ---
->! [WARNING]
+> [!WARNING]
 > We're slowly moving away from this website. Check out https://examdawn.pages.dev/ for our current page. The content here will not be maintained.
