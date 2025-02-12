@@ -1,14 +1,20 @@
 import { withMermaid } from "vitepress-plugin-mermaid"
 import { withSidebar } from "vitepress-sidebar"
-import fs from 'fs'
-import { parseStringPromise } from 'xml2js'
 
 // Generate configs before export
 await generateConfig()
 
-export default withMermaid({
+const vitePressSidebarOptions = {
+  documentRootPath: '/',
+  collapsed: false,
+  capitalizeFirst: true,
+  excludePattern: ['README.md'],
+  useFolderTitleFromIndexFile: true
+};
+
+const mermaidConfig = withMermaid({
   title: "Exam Dawn",
-  description: "An All-in-One Resource Site for last minute preparation",
+  description: "An All-in-One Resource Site for BNU UG Students",
   ignoreDeadLinks: true,
   cleanUrls: true,
   lastUpdated: true,
@@ -55,3 +61,6 @@ export default withMermaid({
     class: "mermaid my-class"
   }
 })
+
+
+export default defineConfig(withSidebar(mermaidConfig, vitePressSidebarOptions));
