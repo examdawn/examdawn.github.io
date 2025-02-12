@@ -1,9 +1,6 @@
 import { withMermaid } from "vitepress-plugin-mermaid"
 import { withSidebar } from "vitepress-sidebar"
 
-// Generate configs before export
-await generateConfig()
-
 const vitePressSidebarOptions = {
   documentRootPath: '/',
   collapsed: false,
@@ -37,18 +34,6 @@ const mermaidConfig = withMermaid({
       { text: 'Request Takedown', link: "/contents/takedown" },
       { text: 'Typography', link: "/contents/typography" },
       { text: 'Queries and Suggestions', link: "https://github.com/examdawn/content/issues" },
-      {
-        text: 'Select Course',
-        items: navItemNames
-      }
-    ],
-    sidebar: sidebarConfig,
-    socialLinks: [
-      { 
-        icon: 'github',
-        link: 'https://github.com/examdawn/',
-        ariaLabel: 'Our Git Profile'
-      }
     ]
   },
   markdown: {
@@ -62,5 +47,4 @@ const mermaidConfig = withMermaid({
   }
 })
 
-
-export default defineConfig(withSidebar(mermaidConfig, vitePressSidebarOptions));
+export default defineConfig(withSidebar(withMermaid(mermaidConfig), vitePressSidebarOptions));
