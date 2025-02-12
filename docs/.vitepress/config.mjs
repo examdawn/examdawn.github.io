@@ -6,6 +6,7 @@ const vitePressSidebarOptions = {
   collapsed: false,
   capitalizeFirst: true,
   excludePattern: ['README.md'],
+  includeDotFiles: false,
   useFolderTitleFromIndexFile: true
 };
 
@@ -47,4 +48,4 @@ const mermaidConfig = withMermaid({
   }
 })
 
-export default defineConfig(withSidebar(withMermaid(mermaidConfig), vitePressSidebarOptions));
+export default defineConfig(withSidebar(withMermaid(mermaidConfig), vitePressSidebarOptions));  
