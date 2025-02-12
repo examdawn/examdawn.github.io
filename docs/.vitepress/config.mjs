@@ -1,16 +1,16 @@
 import { withMermaid } from "vitepress-plugin-mermaid"
 import { withSidebar } from "vitepress-sidebar"
+import { defineConfig } from "vite";
 
 const vitePressSidebarOptions = {
   documentRootPath: '/',
   collapsed: false,
   capitalizeFirst: true,
   excludePattern: ['README.md'],
-  includeDotFiles: false,
   useFolderTitleFromIndexFile: true
 };
 
-const mermaidConfig = withMermaid({
+const mermaidConfig = withSidebar({
   title: "Exam Dawn",
   description: "An All-in-One Resource Site for BNU UG Students",
   ignoreDeadLinks: true,
@@ -48,4 +48,6 @@ const mermaidConfig = withMermaid({
   }
 })
 
-export default defineConfig(withSidebar(withMermaid(mermaidConfig), vitePressSidebarOptions));  
+const mermaidWithSidebar = withMermaid(mermaidConfig);
+
+export default defineConfig(withSidebar(mermaidWithSidebar, vitePressSidebarOptions));  
