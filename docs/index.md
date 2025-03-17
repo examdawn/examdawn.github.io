@@ -12,9 +12,9 @@ hero:
     - theme: alt
       text: Add to Docs
       link: https://github.com/examdawn/content/
-  features:
-    - title: Open Latest Page
-      link: https://examdawn.pages.dev
+features:
+  - title: Open Latest Page
+    link: https://examdawn.pages.dev
 ---
 
 > [!WARNING]
